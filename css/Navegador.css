@@ -169,7 +169,8 @@ padding: 10px;
     .menu nav ul li a span{width: 20px;
         display:inline-block;
         margin-right:10px;
-        color:#46a2fd;}
+        color:#46a2fd;
+    background: white;}
         
         .container-aside{flex-wrap: wrap;}
 }
