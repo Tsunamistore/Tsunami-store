@@ -101,7 +101,8 @@ justify-content: center;
 align-items: center;
 cursor: pointer;
 padding: 10px;
-    display: none}
+    display: none
+ background: white;}
 #icon-menu:hover{background: #f2f2f2;}
 /*fonts*/
 @font-face{font-family:tsunami;
@@ -157,7 +158,7 @@ padding: 10px;
 }
     
     #icon-menu{display:flex;
-    background: white;}
+   }
     
     .menu nav ul li a{
         margin-top: 40px;
