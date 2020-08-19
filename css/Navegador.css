@@ -165,7 +165,7 @@ padding: 10px;
 
         
 }
-   .logos{display: none;} 
+   .logos img{display: none;} 
     .menu nav ul li a span{width: 20px;
         display:inline-block;
         margin-right:10px;
