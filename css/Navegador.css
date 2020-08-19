@@ -156,7 +156,8 @@ padding: 10px;
         
 }
     
-    #icon-menu{display:flex;}
+    #icon-menu{display:flex;
+    background: white;}
     
     .menu nav ul li a{
         margin-top: 40px;
@@ -170,7 +171,7 @@ padding: 10px;
         display:inline-block;
         margin-right:10px;
         color:#46a2fd;
-    background: white;}
+    }
         
         .container-aside{flex-wrap: wrap;}
 }
