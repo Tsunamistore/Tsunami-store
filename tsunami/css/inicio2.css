@@ -1,0 +1,212 @@
+*{margin:0;
+	padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+font-family:Aventa2;}
+
+@font-face{font-family:Aventa2;
+src:url(../fuentes/Aventa2.otf)}
+
+
+body{ background:#f6f6f6;}
+
+
+
+/*portada*/
+
+.flexslider{
+    width:100%;
+    height:500px;
+    position:center;
+    margin-top:80px;
+
+
+}
+
+    /*/categorias}*/
+
+input[type=radio]{
+    display: none;
+}
+
+.container-category{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+}
+
+.container-category .Sonido{
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/equipo.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category .Otros {
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    color: black;
+    background-image: url(../imagenes/backgraund.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category label{
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/maneki.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category .Belleza {
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/belleza.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category .Linternas {
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/Lampara.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container-category label:hover{opacity: 0.5;}
+
+/*sistema de filtrado/**/
+
+[value="Todos"]:checked ~ .posts .post[data-category]{
+    display:block;
+}
+
+[value="Belleza"]:checked ~ .posts .post:not([data-category~="Belleza"]),
+[value="Sonido"]:checked ~ .posts .post:not([data-category~="Sonido"]),
+[value="Otros"]:checked ~ .posts .post:not([data-category~="Otros"]),
+[value="Linternas"]:checked ~ .posts .post:not([data-category~="Linternas"]){
+    display: none;
+}
+
+[value="Belleza"]:checked ~ .container-category [for="Belleza"],
+[value="Sonido"]:checked ~ .container-category [for="Sonido"],
+[value="Otros"]:checked ~ .container-category [for="Otros"],
+[value="Linternas"]:checked ~ .container-category [for="Linternas"],
+[value="Todos"]:checked ~ .container-category [for="Todos"]{
+    background:#46a2fd;
+    color: #fff;
+}
+
+
+/*/Ventas/*/
+
+.container-post{max-width:1200px;
+margin: auto;}
+
+.posts{width: 100%;
+display:grid;
+grid-template-columns:repeat(4, 1fr);
+grid-gap:20px;
+margin-top: 20px;
+padding: 20px;}
+
+.posts .post{
+    background:#fff;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom:20px;
+    
+}
+.posts .post .ctn-img{width: 100%;
+}
+
+.posts .post .ctn-img img{
+    width:100%;
+    height:300px;
+    object-fit: cover;
+}
+
+.post h2{font-size: 18px;
+margin-top: 20px;
+padding: 0px 20px;
+font-family:comfort;}
+
+.post span{margin-top: 20px;
+display: block;
+padding: 0px 20px;
+font-family: sans-serif;}
+
+.ctn-tag{ width: 100%;
+display: flex;
+flex-wrap: wrap;
+margin-left: 16px;
+margin-top: 16px;}
+
+.ctn-tag li{list-style:none;
+    font-size: 16px;
+    margin: 4px;
+    padding: 6px 10px;
+    background:#46a2fd;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.post button{margin-top: 20px;
+margin-left: 20px;
+padding: 10px 50px;
+    font-size: 16px;
+    background:black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: beige;
+}
+
+.post button:hover{opacity: 0.9;}
+
+/*Responsive*/
+
+@media screen and (max-width: 1200px){
+    
+    .posts{
+        grid-template-columns:repeat(3, 1fr);
+        
+    }
+    
+}
+
+
+@media screen and (max-width: 900px){
+    .
+    .posts{
+        grid-template-columns:repeat(2, 1fr);
+        
+    }
+    
+}
+
+
+@media screen and (max-width:580px){
+    
+    .posts{
+        grid-template-columns:repeat(1, 1fr);
+        
+    }
+    
+}

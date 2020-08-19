@@ -1,0 +1,212 @@
+*{margin:0;
+	padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+font-family:Aventa2;
+font-size: 20px;}
+
+@font-face{font-family:Aventa2;
+src:url(../fuentes/Aventa2.otf)}
+
+
+body{ background:#bdb6b4;}
+
+
+
+/*portada*/
+
+.flexslider{
+    width:100%;
+    height:500px;
+    position:center;
+    margin-top:80px;
+
+
+}
+
+    /*/categorias}*/
+
+input[type=radio]{
+    display: none;
+}
+
+.container-category{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+}
+
+.container-category .Kpop{
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/banner.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category .Anime {
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/anime.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category label{
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/maneki.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category .Piercing {
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/pircin.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-category .Cartoon {
+    padding: 6px 40px;
+    margin: 10px;
+    font-size: 20px;
+    background-image: url(../imagenes/Cartoon.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container-category label:hover{opacity: 0.5;}
+
+/*sistema de filtrado/**/
+
+[value="Todos"]:checked ~ .posts .post[data-category]{
+    display:block;
+}
+
+[value="piercing"]:checked ~ .posts .post:not([data-category~="piercing"]),
+[value="Kpop"]:checked ~ .posts .post:not([data-category~="Kpop"]),
+[value="Anime"]:checked ~ .posts .post:not([data-category~="Anime"]),
+[value="Cartoon"]:checked ~ .posts .post:not([data-category~="Cartoon"]){
+    display: none;
+}
+
+[value="Piercing"]:checked ~ .container-category [for="Piercing"],
+[value="Kpop"]:checked ~ .container-category [for="Kpop"],
+[value="Anime"]:checked ~ .container-category [for="Anime"],
+[value="Cartoon"]:checked ~ .container-category [for="Cartoon"],
+[value="Todos"]:checked ~ .container-category [for="Todos"]{
+    background:#46a2fd;
+    color: #fff;
+}
+
+
+/*/Ventas/*/
+
+.container-post{max-width:1200px;
+margin: auto;}
+
+.posts{width: 100%;
+display:grid;
+grid-template-columns:repeat(4, 1fr);
+grid-gap:20px;
+margin-top: 20px;
+padding: 20px;}
+
+.posts .post{
+    background:#fff;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom:20px;
+    
+}
+.posts .post .ctn-img{width: 100%;
+}
+
+.posts .post .ctn-img img{
+    width:100%;
+    height:300px;
+    object-fit: cover;
+}
+
+.post h2{font-size: 18px;
+margin-top: 20px;
+padding: 0px 20px;
+font-family:comfort;}
+
+.post span{margin-top: 20px;
+display: block;
+padding: 0px 20px;
+font-family: sans-serif;}
+
+.ctn-tag{ width: 100%;
+display: flex;
+flex-wrap: wrap;
+margin-left: 16px;
+margin-top: 16px;}
+
+.ctn-tag li{list-style:none;
+    font-size: 16px;
+    margin: 4px;
+    padding: 6px 10px;
+    background:#46a2fd;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.post button{margin-top: 20px;
+margin-left: 20px;
+padding: 10px 50px;
+    font-size: 16px;
+    background:black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: beige;
+}
+
+.post button:hover{opacity: 0.9;}
+
+/*Responsive*/
+
+@media screen and (max-width: 1200px){
+    
+    .posts{
+        grid-template-columns:repeat(3, 1fr);
+        
+    }
+    
+}
+
+
+@media screen and (max-width: 900px){
+    .
+    .posts{
+        grid-template-columns:repeat(2, 1fr);
+        
+    }
+    
+}
+
+
+@media screen and (max-width:580px){
+    
+    .posts{
+        grid-template-columns:repeat(1, 1fr);
+        
+    }
+    
+}
