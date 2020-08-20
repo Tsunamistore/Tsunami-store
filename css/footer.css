@@ -48,10 +48,14 @@ display: flex;}
 .file img{width: 36px;
 height: 36px;}
 
-.file label a{margin-top: 10px;
+.file label{margin-top: 10px;
 margin-left: 20px;
 color:#c7c7c7;
 font-family: sans-serif;}
+
+.file label a{
+
+color:#c7c7c7;}
 
 .colum3 h1{font-size: 22px;
     font-family: sans-serif;
